@@ -1,0 +1,2 @@
+- https://dzone.com/refcardz/windows-powershell
+- https://fr.wikipedia.org/wiki/PowerShell
