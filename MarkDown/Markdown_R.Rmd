@@ -1,0 +1,19 @@
+# R Markdown
+
+[R Markdown - Rstudio](http://rmarkdown.rstudio.com/index.html)
+[R Markdown Cheat Sheet - Rstudio](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+notebook.Rmd
+
+# Code chunks
+knitr package
+
+http://kbroman.org/knitr_knutshell/pages/Rmarkdown.html
+
+```{r, engine='bash', count_lines}
+wc -l en_US.twitter.txt 
+```
+
+```{r, engine='python'}
+plot(x,np.sin(x))
+```
