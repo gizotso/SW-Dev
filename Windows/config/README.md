@@ -1,7 +1,7 @@
-﻿# Windows env Variable
+﻿# Windows env Variable (non portable env)
 
-* SET_ENV = D:\PortableApps\Scripts\set_env.cmd
-  shortcut to be able to set custom env defined in shell scripts
+* add to the PATH location of set_env.cmd (D:\PortableApps\Scripts)
+  this makes possible to quickly set custom env from a cmd. `set_env`
 * PATH (expandable string)
 * R_HOME (string)
 * R_HOME_bin (string)
