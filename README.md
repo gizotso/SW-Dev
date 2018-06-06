@@ -11,3 +11,8 @@
 * http://forums.cnetfrance.fr
 * Wikipedia
 * WikiBooks
+
+# Licenses
+* [Creative Commons](https://creativecommons.org/licenses/)
+   * https://en.wikipedia.org/wiki/Creative_Commons_license
+   * BY NC SA
