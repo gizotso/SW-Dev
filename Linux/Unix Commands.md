@@ -5,13 +5,17 @@ Linux : Unix-like and mostly POSIX-compliant[8] computer operating system assemb
 * http://doc.ubuntu-fr.org/tutoriel/console_commandes_de_base 
 * Unix commands reference card : http://www.digilife.be/quickreferences/QRC/UNIX%20commands%20reference%20card.pdf
 * Unix Reference Card  http://www.cs.jhu.edu/~joanne/unixRC.pdf
+* http://mally.stanford.edu/~sr/computing/basic-unix.html
+* [Unix Commands @Wikipedia-EN](https://en.wikipedia.org/wiki/List_of_Unix_commands)
+* [Unix/Linux Command Reference FOSSWire](https://files.fosswire.com/2007/08/fwunixref.pdf)
 * Lab : 
    * https://github.com/amplab/datascience-sp14/blob/master/lab1/unix-utils.md 
-   * https://github.com/amplab/datascience-sp14/blob/master/lab1/solutions.md 
- 
+   * https://github.com/amplab/datascience-sp14/blob/master/lab1/solutions.md
 
 
 `man <command>` : Help (type q to Quit)
+
+`cat, more, touch, sed&cut, awk, find, >, grep, egrep, ...`
 
 # File Commands
 `pwd` : print name of current/working director
@@ -38,11 +42,18 @@ Linux : Unix-like and mostly POSIX-compliant[8] computer operating system assemb
    * -l : long listing format
    * -r (--reverse) : sort order reverse
    * -t : sort by modification time 
-
+   * -S  sort by file size
+   * -d, --directory list directory entries instead of content
+   * -h, --human-readable print file sizes in human readable format K/M/G (e.g., 1K 234M 2G)
+   * -R  --recursive list subdirectories recursively
+   * -L --dereference when showing file information for a symbolic link, show 
+   *       information  for  the file the link references rather than for the link itself
+   * --color=tty option shows items in different colors according to their type. For example, directories are blue, executable files are green, symlinks are cyan, etc.
+   * -F --classify append indicator (one of */=@|) to entries  > indicate type. You might not like mixing -F and --color=tty !
+   
 ```bash
 ls –Al
 ls –altr
-# -h (--human-readable) : display filesize in K/M/G
 ls -lh
 ls –l | grep "^reload"
 ls reload* | xargs grep "mot"
@@ -605,15 +616,20 @@ ps -ef | grep gizotso | grep vnc
 vncserver -kill :2
 ```
 
-# UNIX Commands examples
+## XArgs
 * http://www.thegeekstuff.com/2013/12/xargs-examples
 
 # References
-- http://www.cs.jhu.edu/~joanne/unixRC.pdf
-- [Unix/Linux Command Reference FOSSWire](https://files.fosswire.com/2007/08/fwunixref.pdf)
-- http://mally.stanford.edu/~sr/computing/basic-unix.html
-- [Unix Commands @Wikipedia-EN](https://en.wikipedia.org/wiki/List_of_Unix_commands)
 - [Linux Shell Scripting @cyberciti.biz](https://bash.cyberciti.biz/guide/Main_Page)
+- http://doc.ubuntu-fr.org/sed manipulation/substitutions de strings
+   - https://help.ubuntu.com/community/grep
+   - https://help.ubuntu.com/community/find
+- [LinuxCommand.org](http://linuxcommand.org)
+   - [LS](http://linuxcommand.org/lc3_man_pages/ls1.html)
+   - [PS](http://linuxcommand.org/lc3_man_pages/ps1.html)
+   - [DU](http://linuxcommand.org/lc3_man_pages/du1.html)
+- [Gnu SW Bash Reference Manual](http://www.gnu.org/software/bash/manual/bash.html)
+
 
 # Unix like under Windows
 * **Windows Subsystem Linux** (WSL) : Bash Ubuntu under Windows 
