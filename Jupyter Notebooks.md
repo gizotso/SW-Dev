@@ -2,6 +2,10 @@
 ![](http://jupyter.org/assets/nav_logo.svg)
 http://jupyter.org/
 
+* https://jupyter.org/try 
+* http://nbviewer.jupyter.org/
+* https://github.com/jupyter/docker-demo-images
+
 ```
 ipython notebook --help-all
 jupyter notebook --help-all
@@ -15,7 +19,7 @@ It is useful to have a shortcut in FreeCommander to open Jupyter Notebook in a s
 "Jupyter Notebook.exe" starts IPython (%WINPYDIR%\Scripts\ipython3.exe) under a terminal and starts a local web server : http://localhost:8889/tree
 
 
-ipython_notebook.bat Wrapper (just use a call to set_env to have required env var well set)
+ipython_notebook.bat Wrapper (just use a call to set_env to have required env var well set (%PYTHOHOME%, %PYTHONPATH%, ...? )
 ```
 call %~dp0set_env.cmd
 jupyter notebook --notebook-dir=%PYTHON_iNB_PATH%
