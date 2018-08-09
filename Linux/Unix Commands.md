@@ -337,8 +337,8 @@ sed 's/hello/world/' file.txt > output.txt
 # one to one char translation : i->a, o->x
 echo "This is Cool. " | sed -e 'y/io/ax/'
 
-# edit file.txt with sed -i
-sed -i 's/hello/world/' file.txt
+# in place edit file.txt with sed -i
+sed -i 's/hello/world/g' "file 1.txt"
 
 # delete command: (d)
 # deline line 20 and 30 (-e allows to pass multiple commands)
