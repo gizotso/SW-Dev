@@ -5,6 +5,8 @@ http://jupyter.org/
 * https://jupyter.org/try 
 * http://nbviewer.jupyter.org/
 * https://github.com/jupyter/docker-demo-images
+* Online Jupyter Notebooks (Microsoft) : https://notebooks.azure.com/
+* Online Jupyter Notebooks (Google) : https://colab.research.google.com/notebooks/welcome.ipynb
 
 ```
 ipython notebook --help-all
