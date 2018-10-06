@@ -53,7 +53,7 @@ http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_
 ## Plugins
 - http://docs.notepad-plus-plus.org/index.php/Plugin_Central
 
-### Best plugins available through Plugin Manager
+### Best plugins available through Plugin Manager (more plugins on the x86 version)
 * Combine [ScoutSoft](http://www.scout-soft.com/combine/)
 * Compare -- FAIL Npp6.9.2 > use compare 1.5.6.2 (ComparePlugin.v1.5.6.2.bin.zip [SourceForge](https://sourceforge.net/projects/npp-compare))
    * Compare v2.0 from Plugin Manager [GitHub](GitHub https://github.com/jsleroy/compare-plugin)
