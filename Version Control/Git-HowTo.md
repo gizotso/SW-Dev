@@ -139,10 +139,59 @@ Goals :
 Understanding that git works with the changes, not the files.
 
 
-
 # 10. History
+https://githowto.com/history
+```
+git log
+git log --pretty=oneline
+```
+
+```
+git log --pretty=oneline --max-count=2
+git log --pretty=oneline --since='5 minutes ago'
+git log --pretty=oneline --until='5 minutes ago'
+git log --pretty=oneline --author=<your name>
+git log --pretty=oneline --all
+```
+
+```
+git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago' --author=alex
+```
+
+Ultimate format log
+```
+git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+```
 
 # 11. Aliases
+https://githowto.com/aliases
+
+.GITCONFIG
+```
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+```
+
+command aliases (Shell)
+```
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+```
 
 # 12. Getting older versions
 
