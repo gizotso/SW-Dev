@@ -1,17 +1,18 @@
 # GIT References
-* [Git How To](https://githowto.com/) : Very nice tutorial
-* [GIT](https://git-scm.com/doc)
-* [Pro GIT](http://progit.org/book/)
+* [Git How To](https://githowto.com/) : Very nice tutorial
+* [Git - the simple Guide by Roger Dudler](http://rogerdudler.github.io/git-guide/)
+* [GIT](https://git-scm.com/doc)
+* [Pro GIT Book](http://progit.org/book/)
 * [GIT wikibooks](http://fr.wikibooks.org/wiki/Git)
 * [GitHub GIT Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet/) [ (pdf)](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 * [GIT Cheat Sheet iansheridan@GitHub](https://gist.github.com/iansheridan/870778)
 * [GitHub Flow](https://guides.github.com/introduction/flow/)  
-* http://doc.ubuntu-fr.org/git
+* [GIT Ubuntu Doc](http://doc.ubuntu-fr.org/git)
 * GIT Flow
 
 Git online servers
-* GitHub
-* [Gitorious](https://gitorious.org/)
+* [GitHub](https://github.com)
+* [GitLab](https://about.gitlab.com/)
 
 ## GIT install
 - [GIT](https://git-scm.com/download/win) Install version and Portable version.
@@ -27,6 +28,7 @@ git --help
 Under Windows
 * Git Bash (git-bash.exe): bash emulation
 * Git Cmd : GIT Windows command line interpreter
+* Bundled within Cmder Console
 
 ## Git config
 **.gitconfig** : configuration file located under $HOME directory that stores git configuration
@@ -43,13 +45,12 @@ git config --global core.safecrlf true
 git config --global color.ui auto
 ```
 
-## GIT env
+### GIT env variables
 GIT_EDITOR, EDITOR 
 https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables
 https://markb.co.uk/portable-git-windows-setting-home-environment-variable.html
 
-### Cmder
-GIT_INSTALL_ROOT=D:\PortableApps\cmder\vendor\git-for-windows
+With Cmder Console : GIT_INSTALL_ROOT=D:\PortableApps\cmder\vendor\git-for-windows
 
 ## GIT commands
 ### Manage Repositories
@@ -76,13 +77,47 @@ git remote -v
 git fetch remotename
 ```
 
-### Add/Remove files
+### Add/Remove files - Staging
+[Git-add help](https://git-scm.com/docs/git-add)
+
 ```
+# Stages file1 and file 2
 git add <file1> <file2>
-# add all files under Dir (recursively)
+
+# Stages all files under Dir (recursively)
 git add <dir>
+
+# Stages content from all *.txt files under Documentation directory and its subdirectories
+git add Documentation/\*.txt
+```
+
+Add the files in the local repository and stages them for commit.
+```
+# Add all the changes from that level
+# > Stage All (new, modified, deleted) files
 git add .
 
+# Stage All files on the Repo
+git add *
+```
+To unstage a file, use `git reset HEAD YOUR-FILE`.
+
+```
+# add all the changes (-A <=> --all)
+#  new files, files already tracked in current working tree, and removed files from index that are no longer in the working tree
+#  <=> git add .; git add -u .
+#  with GIT v2.x <=> git add .
+git add --all
+
+# Stages modified and deleted files only (without new files)
+git add -u
+git add --update
+
+# Stages New and Modified files only
+git add --ignore-removal .
+```
+
+```
 # initialize the Repoistory with a README
 echo # iNotebooks Repository >> README.md
 git init
@@ -99,7 +134,7 @@ git rm --cached file1.txt
 
 Check currente state of the repository : `git status` (states of both working dir and repository)
 - Untracked files (use git add to track)
-- Changes to be commited (use git tm --cached <file> to unstage) 
+- Changes to be commited (use `git tm --cached <file>` to unstage) 
 
 `git status`
 > On branch master</br>Initial commit</br></br>Untracked files:</br> (use "git add <file>..." to include in what will be committed)</br>       hello.html
@@ -260,6 +295,7 @@ git push
 **.gitignore**
 
 ```
+git push origin master
 git push -u origin master
 
 #push an existing repository from the command line

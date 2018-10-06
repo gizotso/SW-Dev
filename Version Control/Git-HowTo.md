@@ -148,10 +148,13 @@ git log --pretty=oneline
 
 ```
 git log --pretty=oneline --max-count=2
+git log --pretty=oneline --since=2.days
 git log --pretty=oneline --since='5 minutes ago'
 git log --pretty=oneline --until='5 minutes ago'
 git log --pretty=oneline --author=<your name>
 git log --pretty=oneline --all
+git log --pretty=format: --name-only --since="2 days ago"
+
 ```
 
 ```
