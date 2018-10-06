@@ -32,6 +32,7 @@ Under Windows
 
 ## Git config
 **.gitconfig** : configuration file located under $HOME directory that stores git configuration
+**.gitignore**
 
 ```
 # configure user for all local repositories (set under $HOME\.gitconfig)
@@ -52,8 +53,9 @@ https://markb.co.uk/portable-git-windows-setting-home-environment-variable.html
 
 With Cmder Console : GIT_INSTALL_ROOT=D:\PortableApps\cmder\vendor\git-for-windows
 
-## GIT commands
-### Manage Repositories
+# GIT commands
+
+## Manage Repositories
 ```
 # new local Repository
 git init [project-name]
@@ -77,7 +79,7 @@ git remote -v
 git fetch remotename
 ```
 
-### Add/Remove files - Staging
+## Add/Remove files - Staging
 [Git-add help](https://git-scm.com/docs/git-add)
 
 ```
@@ -147,7 +149,7 @@ git status
 > On branch master</br>Initial commit</br></br>Changes to be committed:</br>  (use "git rm --cached <file>..." to unstage)</br>        new file:   hello.html
 
 
-### Modifying files and Staging the changes
+## Modifying files and Staging the changes
 Once a tracked file has been modified, it needs to be "staged" which means flagged as files to be taken into account for next commit
 Staging steps allow to manage what goes into a commit and when. 
 
@@ -164,13 +166,13 @@ Staging steps allow to manage what goes into a commit and when.
 > On branch master</br>Changes to be committed:</br>  (use "git reset HEAD <file>..." to unstage)</br></br>        modified:   hello.html
 
 
-### Commit Changes
+## Commit Changes
 `git commit -m "Changes on hello.html"`
 
 `git status`
 > On branch master</br>nothing to commit, working tree clean
 
-### Repo History
+## Repo History
 `git log`
 
 `git log --pretty=oneline`
@@ -227,9 +229,10 @@ alias go="git checkout "
 
 ## Revert to previous version
 Checkout any previous version into the working dir
-`git hist`
-
-`git checkout <hash>`
+```
+git hist
+git checkout <hash>
+```
 
 
 ## Tagging versions
@@ -276,28 +279,76 @@ v1 and v1-beta can now be checkout by tag
 6. `git tag -d oops-reverted` : removal of tag to permit garbage collector to delete unreferenced commits.
 
 
-## Remote
+# Syncing / Remotes
+* https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-git-pull
+* https://www.atlassian.com/git/tutorials/syncing
+
 ```
 # list remotes
 git remote
 git remote -v
+```
+> origin  https://github.com/gizotso/Python.git (fetch)<\br>origin  https://github.com/gizotso/Python.git (push)
 
+```
+# list GIT repo branches
+git branch -a
+```
+> * master</br>remotes/origin/HEAD -> origin/master</br>remotes/origin/master
+
+```
 # get details on remote origin
 git remote show origin
+```
 
-# pull = fetch+merge
+## Fetch
+git fetch really only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
+Fetch is great for getting a fresh view on all the things that happened in a remote repository.
+Due to it's "harmless" nature, you can rest assured: fetch will never manipulate, destroy, or screw up anything. This means you can never fetch often enough.
+
+* https://www.atlassian.com/git/tutorials/syncing/git-fetch
+
+```
+# git fetch <remote> : Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.
 git fetch
-git merge origin/master
+git fetch origin
 
+# idem but only for the specified branch
+git fetch <remote> <branch>
+
+# -dry-run option will perform a demo run of the command. I will output examples of actions it will take during the fetch but not apply them.
+git fetch --dry-run
+
+# compare
+git diff <remote-tracking branch> <local branch>
+git diff remotes/origin/master master
+git diff --stat --color remotes/origin/master master
+
+git diff FETCH_HEAD
+git log -p HEAD..FETCH_HEAD
+```
+
+
+## Pull
+git pull, in contrast, is used with a different goal in mind: to update your current HEAD branch with the latest changes from the remote server. 
+This means that pull not only downloads new data; it also directly integrates it into your current working copy files.
+
+```
+# pull = fetch+merge
+git pull
+git pull origin master
+git fetch; git merge origin/master
+```
+
+## Push
+```
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+# git push <remote-name> <branch-name>
 git push
-```
-
-**.gitignore**
-
-```
 git push origin master
-git push -u origin master
+```
 
+```
 #push an existing repository from the command line
 git remote add origin https://github.com/gizotso/iNotebooks.git
 git push -u origin master
@@ -317,11 +368,12 @@ git push iNotebooks master
 git push --set-upstream iNotebooks master
 ```
 
-# GitHub
+## GitHub
 - [GitHub Guides](https://guides.github.com/) : Getting started with GitHub, GitHub Flow
 - https://help.github.com/articles/generating-ssh-keys/ 
 - https://help.github.com/articles/changing-a-remote-s-url/ 
 - https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/ 
+
 
 # Clone Repository
 ```
