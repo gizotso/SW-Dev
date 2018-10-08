@@ -62,6 +62,7 @@ http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_
 * JSON viewer
 * MultiClipboard
 * NppExec > (F6) python "$(FULL_CURRENT_PATH)"
+* RunMe > Usefull to open a shell or an explorer from current file
 * PyNPP
 * NppRegExTractor
 * Quick color picker+ [Npp6.9.2 - v2.0] [GitHub NppCP](GitHub https://github.com/nulled666/nppqcp/)
