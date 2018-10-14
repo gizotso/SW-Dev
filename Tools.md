@@ -41,6 +41,10 @@
 - https://www.cathrinewilhelmsen.net/2012/05/16/notepad-remove-duplicates-remove-blank-lines-and-sort-data-in-one-operation/
 - https://superuser.com/questions/361116/can-i-use-notepad-to-selectivelly-merge-two-text-files
 
+## Run menu (F5) and Shortcuts
+- http://docs.notepad-plus-plus.org/index.php/Defining_User_Commands
+- shortcuts.xml 
+   - `<Command name="Cmder" Ctrl="yes" Alt="no" Shift="no" Key="82">D:\PortableApps\cmder\Cmder.exe /START &quot;$(CURRENT_DIRECTORY)&quot;</Command>`
 
 ## Used Defined Languages
 http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files
