@@ -40,7 +40,7 @@
 | (.*)/.*$            | match rppt and last part of a path : /db/data/scripts/script.sql \1 = /db/data/scripts                 |
 
 Find special chars (é, ...)
-[^"'0-9a-zA-Z_.:,;$&#\-\s\t\r\n()<=>?!/*|@+%\[\]]
+`[^"'0-9a-zA-Z_.:,;$&#\-\s\t\r\n()<=>?!/*|@+%\[\]]`
 
 # References
 * Online Tool to learn, build & test Regular Expressions : http://regexr.com
