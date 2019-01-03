@@ -6,7 +6,11 @@ http://jupyter.org/
 * http://nbviewer.jupyter.org/
 * https://github.com/jupyter/docker-demo-images
 * Online Jupyter Notebooks (Microsoft) : https://notebooks.azure.com/
+   * https://notebooks.azure.com/help/introduction
+   * Sync with GitHub : [article](https://medium.com/@mikeclymer/integrating-azure-notebooks-jupyter-notebooks-with-github-fd847e941e4)
 * Online Jupyter Notebooks (Google) : https://colab.research.google.com/notebooks/welcome.ipynb
+   * http://colab.research.google.com/github/gizotso
+   * https://nholmber.github.io/2018/09/google-colab/
 
 ```
 ipython notebook --help-all
