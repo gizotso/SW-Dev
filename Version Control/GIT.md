@@ -1,7 +1,10 @@
 # GIT References
-* [Git How To](https://githowto.com/) : Very nice tutorial
-* [Git - the simple Guide by Roger Dudler](http://rogerdudler.github.io/git-guide/)
-* [GIT](https://git-scm.com/doc)
+* [Git How To](https://githowto.com/) : Very nice tutorial
+
+* [Git - the simple Guide by Roger Dudler](http://rogerdudler.github.io/git-guide/)
+
+* [GIT](https://git-scm.com/doc)
+
 * [Pro GIT Book](http://progit.org/book/)
 * [GIT wikibooks](http://fr.wikibooks.org/wiki/Git)
 * [GitHub GIT Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet/) [ (pdf)](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
@@ -9,10 +12,13 @@
 * [GitHub Flow](https://guides.github.com/introduction/flow/)  
 * [GIT Ubuntu Doc](http://doc.ubuntu-fr.org/git)
 * GIT Flow
+* https://blog.osteele.com/2008/05/my-git-workflow/ (nice charts)
 
 Git online servers
 * [GitHub](https://github.com)
 * [GitLab](https://about.gitlab.com/)
+
+![Git Data Transport Command schema by Olivier Steele](https://images.osteele.com/2008/git-transport.png)
 
 ## GIT install
 - [GIT](https://git-scm.com/download/win) Install version and Portable version.
@@ -282,6 +288,8 @@ v1 and v1-beta can now be checkout by tag
 # Syncing / Remotes
 * https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-git-pull
 * https://www.atlassian.com/git/tutorials/syncing
+* https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch
+* http://www.differencebetween.net/technology/difference-between-git-fetch-and-git-pull/
 
 ```
 # list remotes
@@ -311,6 +319,8 @@ Due to it's "harmless" nature, you can rest assured: fetch will never manipulate
 ```
 # git fetch <remote> : Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.
 git fetch
+
+# Get modifications from remote named origin without integrated them (need a merge)
 git fetch origin
 
 # idem but only for the specified branch
@@ -326,6 +336,9 @@ git diff --stat --color remotes/origin/master master
 
 git diff FETCH_HEAD
 git log -p HEAD..FETCH_HEAD
+
+# Merge : merge changes between a branch and the actual HEAD
+git merge <branch>
 ```
 
 
@@ -345,6 +358,8 @@ git fetch; git merge origin/master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 # git push <remote-name> <branch-name>
 git push
+
+# publish my branch on the remote called origin on the master branch 
 git push origin master
 ```
 
