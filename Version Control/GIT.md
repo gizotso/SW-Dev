@@ -18,7 +18,11 @@ Git online servers
 * [GitHub](https://github.com)
 * [GitLab](https://about.gitlab.com/)
 
+* Git Data Transport Command schema by Olivier Steele
 ![Git Data Transport Command schema by Olivier Steele](https://images.osteele.com/2008/git-transport.png)
+
+* [Git Funcamentals tuto](https://code.snipcademy.com/tutorials/git/fundamentals/three-states-areas)
+![Git Funcamentals tuto](https://code.snipcademy.com/code/img/tutorials/git/fundamentals/three-stages-01.svg)
 
 ## GIT install
 - [GIT](https://git-scm.com/download/win) Install version and Portable version.
@@ -77,12 +81,8 @@ git clone http://github.com/mozilla/chromeless.git
 
 # define remote repository (named origin)
 git remote add origin https://github.com/gizotso/iNotebooks.git
-
 # list defined remote repositories
 git remote -v
-
-# Fetch : Update your local with the remote
-git fetch remotename
 ```
 
 ## Add/Remove files - Staging
@@ -309,7 +309,7 @@ git branch -a
 git remote show origin
 ```
 
-## Fetch
+## Fetch : update your local with the remote
 git fetch really only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
 Fetch is great for getting a fresh view on all the things that happened in a remote repository.
 Due to it's "harmless" nature, you can rest assured: fetch will never manipulate, destroy, or screw up anything. This means you can never fetch often enough.
