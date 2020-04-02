@@ -89,8 +89,18 @@ Markdown Syntax Working on GitHub wiki
 alt="Cap Sud Ouest Vallée d'Ossau - sur la route des lacs" width="240" height="180" border="10" /></a>
 
 ## emojis
+* https://api.github.com/emojis
+* https://www.emojicode.org/
+* https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+
 @me :+1: This PR looks great - it's ready to merge! :shipit:
 :kissing: :laughing: :neutral_face:
+:warning:
+:smile:
+:laughing:
+:heart:
+:no_entry:
+:arrow_forward:
 
 ## Code and Syntax highlighting
 The great thing about R Markdown is that we can embed R code within our markdown document. We embed
