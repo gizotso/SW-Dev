@@ -7,7 +7,8 @@
 
 * [Pro GIT Book](http://progit.org/book/)
 * [GIT wikibooks](http://fr.wikibooks.org/wiki/Git)
-* [GitHub GIT Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet/) [ (pdf)](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+* [GitHub GIT Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet/) [ (pdf)]
+   * https://github.github.com/training-kit/downloads/github-git-cheat-sheet/
 * [GIT Cheat Sheet iansheridan@GitHub](https://gist.github.com/iansheridan/870778)
 * [GitHub Flow](https://guides.github.com/introduction/flow/)  
 * [GIT Ubuntu Doc](http://doc.ubuntu-fr.org/git)
