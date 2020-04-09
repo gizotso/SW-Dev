@@ -42,8 +42,10 @@ Under Windows
 * Bundled within Cmder Console
 
 ## Git config
-**.gitconfig** : configuration file located under $HOME directory that stores git configuration
-**.gitignore**
+* **.gitconfig** : configuration file located under $HOME directory that stores git configuration
+* **.gitignore** : configuration file to specify which files to ignore
+   * Generator : https://www.gitignore.io/api/python
+
 
 ```
 # configure user for all local repositories (set under $HOME\.gitconfig)
