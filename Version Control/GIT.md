@@ -109,7 +109,7 @@ git add .
 # Stage All files on the Repo
 git add *
 ```
-To unstage a file, use `git reset HEAD YOUR-FILE`.
+To unstage a file, use `git reset HEAD <file>`.
 
 ```
 # add all the changes (-A <=> --all)
@@ -285,6 +285,14 @@ v1 and v1-beta can now be checkout by tag
 5. `git hist --all` : nothing is lost
 6. `git tag -d oops-reverted` : removal of tag to permit garbage collector to delete unreferenced commits.
 
+## Branches
+```
+# show branches
+git branch
+
+# switch to master branch
+git checkout master
+```
 
 # Syncing / Remotes
 * https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-git-pull
@@ -297,13 +305,14 @@ v1 and v1-beta can now be checkout by tag
 git remote
 git remote -v
 ```
-> origin  https://github.com/gizotso/Python.git (fetch)<\br>origin  https://github.com/gizotso/Python.git (push)
+> origin  https://github.com/gizotso/Python.git (fetch)</br>origin  https://github.com/gizotso/Python.git (push)
 
 ```
 # list GIT repo branches
 git branch -a
 ```
-> * master</br>remotes/origin/HEAD -> origin/master</br>remotes/origin/master
+> \* master</br>remotes/origin/HEAD -> origin/master</br>remotes/origin/master
+
 
 ```
 # get details on remote origin
@@ -311,17 +320,17 @@ git remote show origin
 ```
 
 ## Fetch : update your local with the remote
-git fetch really only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
+`git fetch` really only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
 Fetch is great for getting a fresh view on all the things that happened in a remote repository.
 Due to it's "harmless" nature, you can rest assured: fetch will never manipulate, destroy, or screw up anything. This means you can never fetch often enough.
 
 * https://www.atlassian.com/git/tutorials/syncing/git-fetch
 
 ```
-# git fetch <remote> : Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.
+# git fetch <remote> : Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository. If remote is not specified, use default. (git config --get branch.master.remote --> origin)
 git fetch
 
-# Get modifications from remote named origin without integrated them (need a merge)
+# Get modifications from 'origin' remote without integrated them (need a merge)
 git fetch origin
 
 # idem but only for the specified branch
@@ -329,7 +338,9 @@ git fetch <remote> <branch>
 
 # -dry-run option will perform a demo run of the command. I will output examples of actions it will take during the fetch but not apply them.
 git fetch --dry-run
+```
 
+```
 # compare
 git diff <remote-tracking branch> <local branch>
 git diff remotes/origin/master master
@@ -346,11 +357,13 @@ git merge <branch>
 ## Pull
 git pull, in contrast, is used with a different goal in mind: to update your current HEAD branch with the latest changes from the remote server. 
 This means that pull not only downloads new data; it also directly integrates it into your current working copy files.
+Pull : Fetch
 
 ```
-# pull = fetch+merge
+# pull = fetch + merge
 git pull
 git pull origin master
+
 git fetch; git merge origin/master
 ```
 
