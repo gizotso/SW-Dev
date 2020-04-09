@@ -357,7 +357,7 @@ git merge <branch>
 ## Pull
 git pull, in contrast, is used with a different goal in mind: to update your current HEAD branch with the latest changes from the remote server. 
 This means that pull not only downloads new data; it also directly integrates it into your current working copy files.
-Pull : Fetch
+
 
 ```
 # pull = fetch + merge
