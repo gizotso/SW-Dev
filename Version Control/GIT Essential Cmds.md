@@ -19,11 +19,20 @@
 ## Cancel Commit : to cancel the commit, we need to create a commit that deletes the changes saved by unwanted commit
 `git revert HEAD`
 
-## Clenup : Print out the list of files which will be removed (dry run)
+## Cleanup : Print out the list of files which will be removed (dry run)
 `git clean -n`
 
-`git clean`
+`git clean -f`
 
+## Delete files
+```
+#removes the file from the repo but also deletes it from the local file system
+git rm file1.txt
+#commit delete
+git commit -m "remove file1.txt"
+```
+
+An alternative is to delete from GitHub GUI
 
 ## Clone a repo from GitHub
 `git clone https://github.com/gizotso/SW-Dev`

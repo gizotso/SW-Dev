@@ -9,6 +9,8 @@
 * [GIT wikibooks](http://fr.wikibooks.org/wiki/Git)
 * [GitHub GIT Cheat Sheet ENG](https://services.github.com/on-demand/downloads/github-git-cheat-sheet/)
    * [GitHub GIT Cheat Sheet multi_Lang](https://services.github.com/on-demand/downloads/github-git-cheat-sheet/)
+
+* [Interactive GIT Cheat Sheet](http://www.ndpsoftware.com/git-cheatsheet.html#loc=workspace;)
 * [GIT Cheat Sheet iansheridan@GitHub](https://gist.github.com/iansheridan/870778)
 * [GitHub Flow](https://guides.github.com/introduction/flow/)  
 * [GIT Ubuntu Doc](http://doc.ubuntu-fr.org/git)
