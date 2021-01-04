@@ -19,6 +19,10 @@
 - FileZilla
    - `FileZilla.exe -a %ActivDir%`
 - [SyncBack](http://www.syncback.fr/)
+- [curl](https://ec.haxx.se/curl/curl-does)
+- [wget](https://www.gnu.org/software/wget/)
+   - [wget for windows](http://gnuwin32.sourceforge.net/packages/wget.htm)
+   - [How to use wget](https://builtvisible.com/download-your-website-with-wget/)
 
 # Decent Console on Windows
 - [Cmder](http://cmder.net/) : Portable, Multi-tabs, GIT support (git-for-windows). Derived from ConEmu
